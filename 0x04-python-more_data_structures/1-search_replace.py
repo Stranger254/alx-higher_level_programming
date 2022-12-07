@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-def element_at(my_list, idx):
-    if idx < 0:
-        return 'None'
-    if len(my_list) - 1 < idx:
-        return 'None'
-    return(my_list[idx])
+def search_replace(my_list, search, replace):
+    dup_list = my_list.copy()
+    for i in range(len(dup_list)):
+        dup_list[i] = replace if my_list[i] == search else my_list[i]
+    return (dup_list)
